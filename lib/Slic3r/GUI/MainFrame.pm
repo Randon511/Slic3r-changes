@@ -233,6 +233,9 @@ sub _init_menubar {
         wxTheApp->append_menu_item($settingsMenu, "Print&er Settings…\tCtrl+3", 'Show the printer settings editor', sub {
             $self->{plater}->show_preset_editor('printer');
         }, undef, 'printer_empty.png');
+	wxTheApp->append_menu_item($settingsMenu, "Testing", 'Testing', sub {
+            $self->{plater}->show_preset_editor('printer');
+        }, undef, 'printer_empty.png');
     }
 
     # View menu
@@ -261,7 +264,7 @@ sub _init_menubar {
             'Color toolpaths using the configured extruder/filament color',
             sub {
                 $Slic3r::GUI::Settings->{_}{color_toolpaths_by} = 'extruder';
-                wxTheApp->save_settings;
+                wxTheApp->save_settings; 
                 $self->{plater}{preview3D}->reload_print;
             },
             undef, undef, wxITEM_RADIO

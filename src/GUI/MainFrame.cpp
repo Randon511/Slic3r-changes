@@ -173,7 +173,7 @@ void MainFrame::init_menubar()
         }, wxID_ABOUT);
         
     }
-
+/*
     wxMenuBar* menubar = new wxMenuBar();
     menubar->Append(menuFile, _("&File"));
     menubar->Append(menuPlater, _("&Plater"));
@@ -182,7 +182,15 @@ void MainFrame::init_menubar()
     menubar->Append(menuView, _("&View"));
     menubar->Append(menuWindow, _("&Window"));
     menubar->Append(menuHelp, _("&Help"));
-
+*/
+    wxMenuBar* menubar = new wxMenuBar();
+    menubar->Append(menuFile, _("&a"));
+    menubar->Append(menuPlater, _("&b"));
+    menubar->Append(menuObject, _("&c"));
+    menubar->Append(menuSettings, _("&d"));
+    menubar->Append(menuView, _("&e"));
+    menubar->Append(menuWindow, _("&f"));
+    menubar->Append(menuHelp, _("&g"));
     this->SetMenuBar(menubar);
 
 }

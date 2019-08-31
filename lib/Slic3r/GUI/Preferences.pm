@@ -24,7 +24,7 @@ sub new {
     $optgroup->append_single_option_line(Slic3r::GUI::OptionsGroup::Option->new(    # version_check
         opt_id      => 'version_check',
         type        => 'bool',
-        label       => 'Check for updates',
+        label       => 'Check for updates 121212121212',
         tooltip     => 'If this is enabled, Slic3r will check for updates daily and display a reminder if a newer version is available.',
         default     => $Slic3r::GUI::Settings->{_}{version_check} // 1,
         readonly    => !wxTheApp->have_version_check,
@@ -123,7 +123,7 @@ sub new {
     $optgroup->append_single_option_line(Slic3r::GUI::OptionsGroup::Option->new(    # colorscheme
         opt_id      => 'colorscheme',
         type        => 'select',
-        label       => 'Color Scheme',
+        label       => 'Color Scheme 12121212121212',
         tooltip     => 'Choose between color schemes. (Restart of Slic3r required.)',
         labels      => ['Default','Solarized'], # add more schemes, if you want in ColorScheme.pm.
         values      => ['getDefault','getSolarized'], # add more schemes, if you want - those are the names of the corresponding function in ColorScheme.pm.
